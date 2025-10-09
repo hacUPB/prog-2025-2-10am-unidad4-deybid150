@@ -22,14 +22,16 @@ def sim_cohete(etapas):
         print("El cohete se quedó sin combustible en la etapa {etapa_actual + 1}.")
         print("Altitud alcanzada:", altitud, "km")
 
-# Bucle principal
-e = True
-while e == True:
+def menu():
     print("\n--- MENU ---")
     print("R: Simular cohete")
     print("S: Salir")
-    O = input("Seleccione una opción: ").strip().upper()
-    
+    return input("Seleccione una opción: ").strip().upper()
+
+# Bucle principal
+e = True
+while e == True:
+    O = menu()
     match O:
         case "R":
             print("Simulación de lanzamiento de cohete")
